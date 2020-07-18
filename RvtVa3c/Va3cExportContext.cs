@@ -550,11 +550,13 @@ namespace RvtVa3c
         v3 = CurrentVerticesPerMaterial.AddVertex( new PointInt(
           pts[facet.V3], _switch_coordinates ) );
 
-        CurrentGeometryPerMaterial.data.faces.Add( 0 );
+        CurrentGeometryPerMaterial.data.faces.Add( 18 ); //hardcoded
         CurrentGeometryPerMaterial.data.faces.Add( v1 );
         CurrentGeometryPerMaterial.data.faces.Add( v2 );
         CurrentGeometryPerMaterial.data.faces.Add( v3 );
-      }
+        CurrentGeometryPerMaterial.data.faces.Add(0); //hardcoded
+        CurrentGeometryPerMaterial.data.faces.Add(0); //hardcoded
+            }
     }
 
     public void OnMaterial( MaterialNode node )
